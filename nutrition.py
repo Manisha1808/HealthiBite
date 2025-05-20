@@ -1,7 +1,8 @@
+import os
 import requests
 
-NUTRITIONIX_APP_ID = "a153a35e"  # Your actual app ID
-NUTRITIONIX_API_KEY = "0d5303448af59397032abbe4c5157b7f"  # Your actual API key
+NUTRITIONIX_APP_ID = os.getenv("NUTRITIONIX_APP_ID")  # Read from environment
+NUTRITIONIX_API_KEY = os.getenv("NUTRITIONIX_API_KEY")  # Read from environment
 NUTRITIONIX_API_URL = "https://trackapi.nutritionix.com/v2/natural/nutrients"
 
 def get_diet_suggestions(food_item):
