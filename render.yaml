@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: healthtracker-app
+    env: python
+    region: oregon    # or choose your closest region
+    plan: free        # or any other Render plan you want
+    buildCommand: pip install -
