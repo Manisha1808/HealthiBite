@@ -4,4 +4,6 @@ services:
     env: python
     region: oregon    # or choose your closest region
     plan: free        # or any other Render plan you want
-    buildCommand: pip install -
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    autoDeploy: true
